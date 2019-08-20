@@ -25,31 +25,46 @@ function send (event) {
       result.innerHTML = ("Bem vindo ao site Sr. " + name + "<br/>" + "Seu endereço: " + endereco)
     }else if (document.getElementById("female").checked === true) {
       result.innerHTML = ("Bem vindo ao site Sra. " + name + "<br/>" + "Seu endereço: " + endereco)
-    }else {
-      result.innerHTML = ("Preencha seu sexo.")     
     }
   }
 }
 function updateCities(event) {
   var CitiesSP = ["Ribeirão Preto", "São Paulo", "Sorocaba", "Varginha"];
-  var CitiesSP.sort = ["Ribeirão Preto", "São Paulo", "Sorocaba", "Varginha"];
   var CitiesRS = ["Erechim", "Barão de Cotegipe", "Porto Alegre", "Áurea", "Canoas"];
-  var CitiesRS.sort = ["Erechim", "Barão de Cotegipe", "Porto Alegre", "Áurea", "Canoas"];
   var CitiesPR = ["Curitiba", "Pinhais", "São José dos Pinhais", "Toledo"];
-  var CitiesPR.sort = ["Curitiba", "Pinhais", "São José dos Pinhais", "Toledo"];
   var CitiesSC = ["Blumenau", "Florianópolis", "Balneário Camburiu", "Itapema","Joinville"];
-  var CitiesSC.sort = ["Blumenau", "Florianópolis", "Balneário Camburiu", "Itapema","Joinville"];
-  var estado = document.getElementById("states").value;
 
-  if (estado == "RS") {
-    for (var i = 0; i < CitiesRS.length; i++);
-  }else if (estado == "SP") {
+  var estado = document.getElementById("states").value;
+  var cities = document.getElementById("cities");
+
+  if (estado == "SP") {
+    var result = "";
+    for (var i = 0; i < CitiesSP.length; i++) {
+    result+= "<option>" + CitiesSP[i] + "</option>";
+    }
+    cities.innerHTML = result;
     
-    for (var i = 0; i < CitiesSP.length; i++);
-  }else if (estado == "SC") {
-    for (var i = 0; i < CitiesSC.length; i++);
+  }else if (estado == "RS") {
+    var result = "";
+    for (var i = 0; i < CitiesRS.length; i++) {
+    result+= "<option>" + CitiesRS[i] + "</option>";
+    }
+    cities.innerHTML = result;
+    
   }else if (estado == "PR") {
-    for (var i = 0; i < CitiesPR.length; i++);
+    var result = "";
+    for (var i = 0; i < CitiesPR.length; i++) {
+    result+= "<option>" + CitiesPR[i] + "</option>";
+  }
+    cities.innerHTML = result;
+  
+  }else if (estado == "SC") {
+    var result = "";
+    for (var i = 0; i < CitiesSC.length; i++) {
+    result+= "<option>" + CitiesSC[i] + "</option>";
+  }
+    cities.innerHTML = result;
+  
   }
 
   }
