@@ -1,0 +1,56 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-4">
+      <form onsubmit="send(event)">
+        <div class="row">
+          <div class="col-12 mb-4">
+            <h1>Newsletter</h1>
+          </div>
+          <div class="col-6">
+            <label>CEP</label>
+            <input type="text" name="" value="" id="cep" class="form-control">
+          </div>
+           <div class="col-6">
+            <label>Endereço</label>
+            <input type="text" name="" value="" id="rua" class="form-control">
+          </div>
+          <div class="col-6">
+            <label>Cidade</label>
+            <input type="text" name="" value="" id="cidade" class="form-control">
+          </div>
+           <div class="col-6">
+            <label>Bairro</label>
+            <input type="text" name="" value="" id="bairro" class="form-control">
+          </div>
+          <div class="col-3">
+            <label>UF</label>
+            <input type="text" name="" value="" id="uf" class="form-control">
+          </div>
+          <div class="col-3">
+            <label>IBGE</label>
+            <input type="text" name="" value="" id="ibge" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </form>
+      <div class="jumbotron mt-4">
+          <h1 class="display-6">Resultado</h1>
+          <p id="result"></p>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="./js/index.js" charset="utf-8"></script>
+  </body>
+</html>
